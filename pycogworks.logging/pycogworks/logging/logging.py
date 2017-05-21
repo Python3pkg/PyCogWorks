@@ -68,7 +68,7 @@ class Logger():
     def write(self, **kwargs):
         if self.file:
             line = [self.filler] * len(self.header)
-            for k, v in kwargs.iteritems():
+            for k, v in kwargs.items():
                 if k in self.header:
                     line[self.header.index(k)] = str(v)
             self.file.write(self.delim.join(line))

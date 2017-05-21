@@ -116,12 +116,12 @@ class Questionnaire(QDialog):
 		self.doneButton.setDisabled(False)
 
 	def submit(self, checked):
-		print "Done"
+		print("Done")
 		self.done(1)
 
 	def getResults(self):
 		if self.result():
-			return map(int, [ b.checkedButton().text() for b in self.buttonGroups ])
+			return list(map(int, [ b.checkedButton().text() for b in self.buttonGroups ]))
 		else:
 			return None
 

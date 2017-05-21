@@ -77,7 +77,7 @@ class SubjectWindow(QDialog):
         self.move((screen.width()-size.width())/2, (screen.height()-size.height())/2)
         
     def rin_changed(self, rin):
-        self.ok.setEnabled(unicode(rin).isnumeric() and len(rin) == 9)
+        self.ok.setEnabled(str(rin).isnumeric() and len(rin) == 9)
         
     def mainbutton_clicked(self, button):
         if button == self.ok:
@@ -98,4 +98,4 @@ def getSubjectInfo(custom_fields=['Age']):
     return sw.values
 
 if __name__ == '__main__':
-    print getSubjectInfo()
+    print(getSubjectInfo())

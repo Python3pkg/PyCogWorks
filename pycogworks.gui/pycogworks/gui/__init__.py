@@ -17,5 +17,5 @@
 # along with PyCogWorks.  If not, see <http://www.gnu.org/licenses/>.
 #===============================================================================
 
-from cwsubject import SubjectWindow, getSubjectInfo
-from questionnaire import Questionnaire, doQuestionnaire
+from .cwsubject import SubjectWindow, getSubjectInfo
+from .questionnaire import Questionnaire, doQuestionnaire

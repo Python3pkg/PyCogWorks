@@ -17,4 +17,4 @@
 # along with PyCogWorks.  If not, see <http://www.gnu.org/licenses/>.
 #===============================================================================
 
-from crypto import rin2id
+from .crypto import rin2id

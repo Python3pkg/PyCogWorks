@@ -17,12 +17,12 @@
 # along with PyCogWorks.  If not, see <http://www.gnu.org/licenses/>.
 #===============================================================================
 
-from Crypto.Cipher import AES
+from .Crypto.Cipher import AES
 
 __cipher__ = 'AES/CBC (RIJNDAEL) - 16Byte Key'
 
 def rin2id(rin):
-    if unicode(rin).isnumeric() and len(rin) == 9:
+    if str(rin).isnumeric() and len(rin) == 9:
         rin = '%s%s' % (str(rin), str(rin)[:7])
         cipher = AES.new(rin, AES.MODE_CBC, "0000000000000000")
         return ''.join(["%02x" % ord(x) for x in cipher.encrypt(rin)]).strip(), __cipher__
